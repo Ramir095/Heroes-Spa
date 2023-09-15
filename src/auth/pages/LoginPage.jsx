@@ -10,7 +10,7 @@ export const LoginPage = () => {
   const lastPath = localStorage.getItem('lastPath') || '/'; 
 
   const handleLogin = () => {
-    login('Ramiro Aduviri')
+    login('kevaduviri@gmail.com')
 
     navigate(lastPath, { // '/'
       replace: true // reenplaza el historial para que no vuelva a login. Elimina la visita anterior para que no se pueda volver a esa ruta en especifico
