@@ -9,14 +9,14 @@ describe('Prueba en el componente <PrivateRoute />', () => {
     Storage.prototype.setItem = jest.fn();
 
     const contextValue = {
-      authState: {
+      // authState: {
         logged: true,
         user: {
           id: 'ABC',
           name: 'Dieguito Maradona'
         }
       }
-    };
+    // };
 
   render(
     <AuthContext.Provider value={ contextValue }>

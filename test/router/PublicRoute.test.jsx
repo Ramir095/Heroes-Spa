@@ -16,7 +16,7 @@ describe('Prueba en el componente <PublicRoute />', () => {
     render(
       <AuthContext.Provider value={ contextValue }>
         <PublicRoute>
-          <h1>Ruta pública</h1> {/* Este es el childre deberia de renderizarse si el logged es false */}
+          <h1>Ruta pública</h1> {/* Este es el children que deberia de renderizarse si el logged es false */}
         </PublicRoute>
       </AuthContext.Provider>
     );
@@ -59,6 +59,6 @@ describe('Prueba en el componente <PublicRoute />', () => {
       </AuthContext.Provider>
     )
 
-    expect(screen.getByText('Página dc')).toBeTruthy();
+    expect(screen.getByText('Página dc')).toBeTruthy(); // CLASE 226 PARA REPASAR
   });
 });

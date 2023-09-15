@@ -7,15 +7,15 @@ describe('Pruebas en <AppRouter />', () => {
   test('debe de mostrar el login si no está autenticado', () => {
     // Como estoy usando el Routes dentro del componente voy a usar el MemoryRouter y el AuthContext para proporcionar la información del contexto; sino las rutas publicas y privadas no van a funcionar
     const contextValue = {
-      authState: {
+      // authState: {
         logged: false
-      }
+      // }
     }
     
     render(
       <AuthContext.Provider value={ contextValue }>
         <MemoryRouter initialEntries={['/marvel']}> {/* Nos paramos en /marvel para que asi, al no estar autenticado, me dirige al /login */}
-          <AppRouter />
+          <AppRouter /> 
         </MemoryRouter>
       </AuthContext.Provider>
     )
@@ -25,14 +25,14 @@ describe('Pruebas en <AppRouter />', () => {
 
   test('debe de mostrar el componente de Marvel si está auntenticado', () => {
     const contextValue = {
-      authState: {
+      // authState: {
         logged: true,
         user: {
           id: 'ABC123',
           name: 'Ramiro'
         }
-      }
-    };
+      };
+    // };
 
     render(
       <AuthContext.Provider value={contextValue}>

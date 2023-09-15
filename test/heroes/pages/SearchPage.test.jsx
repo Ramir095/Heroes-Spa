@@ -65,7 +65,7 @@ describe('pruebas en <SearchPage />', () => {
     // const input = screen.getByRole('textbox');
     const form = screen.getByRole('form');
     // console.log('acaaa', form);
-    // fireEvent.change(input, { target: { value: 'superman' } })
+              // fireEvent.change(input, { target: { name: 'searchText', value: 'superman' } })
     fireEvent.submit(form);
     // screen.debug()
     

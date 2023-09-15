@@ -16,14 +16,14 @@ describe('Pruebas en <NavBar />', () => {
   
   const contextValue = {
     logout: jest.fn(),
-    authState: {
-      logged: true,
-      user: {
-        id: 'ABC123',
-        name: 'Ramiro Aduviri'
-      }
+    // authState: {
+    logged: true,
+    user: {
+      id: 'ABC123',
+      name: 'Ramiro Aduviri'
+      // }
+    }
   }
-}
 
   beforeEach(() => jest.clearAllMocks());
 
