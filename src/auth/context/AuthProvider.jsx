@@ -23,7 +23,7 @@ const init = () => {
 export const AuthProvider = ({ children }) => {
   
 
-  const [ authState, dispatch ] = useReducer( authReducer, {}, init ) // Primer parametro es el reducer que vamos a utilizar y el segundo es el estado inicial
+  const [ authState, dispatch ] = useReducer( authReducer, {}, init ) // VIDEO 210 Primer parametro es el reducer que vamos a utilizar y el segundo es el estado inicial
 
   const login = (name = '') => {
     const user = { id: 'ABC', name }
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
   };  
 
   const logout = () => {
-    localStorage.removeItem('user');
+    localStorage.removeItem('user'); // Limpiamos el local storage
     const action = {
       type: types.logout
     };
@@ -46,7 +46,13 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{...authState, login, authState, logout }}>
+    <AuthContext.Provider value={{
+      ...authState,
+      authState,
+      // Methods
+      login,
+      logout
+    }}>
       { children }
     </AuthContext.Provider>
   )

@@ -7,7 +7,7 @@ import { getHeroesByName } from '../helpers/getHeroesByName';
 export const SearchPage = () => {
 
   const navigate = useNavigate(); // Para obtener la navegación
-  const location = useLocation(); // Para leer y obtener el query parametro (la información de la ubicación de donde nos encontramos)
+  const location = useLocation(); // Para leer y obtener el query parametro (la información de la ubicación de donde nos encontramos). ¡Clase 203!
   
   const { q = '' } = queryString.parse( location.search ); // Extraemos todo lo que se encuentra en el objeto search. Aca queryString nos deja un objeto con todas las querys separadas. Extraemos la que nos sea util
   const heroes = getHeroesByName(q);
@@ -23,7 +23,7 @@ export const SearchPage = () => {
     e.preventDefault();
     // if( searchText.trim().length <= 1 ) return;
 
-    navigate(`?q=${ searchText }`); // colocamos la busqueda del usuario en el query dentro de la ruta donde nos encotnramos
+    navigate(`?q=${ searchText }`); // colocamos la busqueda del usuario en el query dentro de la ruta donde nos encotnramos. Cuando no anotamos nada adelante del "?" es porque inidicamos que estamos en la misma ruta
   };
 
   return (
